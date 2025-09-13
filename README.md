@@ -5,8 +5,7 @@ A full-featured GraphQL API built with Node.js, TypeScript, Express, Apollo Serv
 **Getting Started**
 
 1. Clone repo
-git clone https://github.com/yourusername/todo-backend.git
-cd todo-backend
+git clone https://github.com/rahulanantharamu/todo-backend.git
 
 2. Install dependencies
 npm  install
