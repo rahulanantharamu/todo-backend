@@ -96,11 +96,7 @@ export async function loginUser(
     throw new AuthenticationError('Invalid email or password');
   }
 
-  const compareFn = (user as any).comparePassword;
-  const passwordMatches =
-    typeof compareFn === 'function'
-      ? await compareFn.call(user, password)
-      : await bcrypt.compare(password, (user as any).password);
+  const passwordMatches = await bcrypt.compare(password, (user as any).password);
 
   if (!passwordMatches) {
     throw new AuthenticationError('Invalid email or password');
